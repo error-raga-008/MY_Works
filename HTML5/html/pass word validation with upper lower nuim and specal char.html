@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="pass">
+        <input type="button" value="prese" onclick="fun()">
+    </form>
+    <p id="p" ></p>
+    <script>
+
+        //password Validation with min of 8 char,number,upper 
+        //and lowercase, and 1 specail char
+        function fun() {
+            
+            var inp = document.getElementById("pass");
+
+            if(inp.value == ""){
+                document.write("WHT")
+            }
+            else if(inp.value.length < 8){
+                document.write("WHT2")
+            }
+            else if(inp.value.search(/[0-9]/) == -1){
+                document.write("WHT3")
+            }
+            else if(inp.value.search(/[a-z]/) == -1){
+                document.write("WHT4")
+            }
+            else if(inp.value.search(/[A-Z]/) == -1){
+                document.write("WHT5")
+            }
+            else if(inp.value.search(/[!/@/#/$/%/^/&/*/(/)/-/=/+/_]/) == -1){
+                document.write("WHT6")
+            }
+           
+        }
+    </script>
+</body>
+</html>

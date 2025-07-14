@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="pass"><br>
+        <input type="button" value="++++++++++++++" onclick="fun()"
+       
+    </form>
+    <p id="p" ></p>
+    <script>
+        //palindrome OR IF THE REVSER NUM IS SAME AS OG.html
+        function fun() {
+    
+                
+            let num = document.getElementById("pass").value;
+            let temo = num
+            let reversedNum = 0;
+
+            for (let i = 0; num > 0; i++) {
+                rem = num % 10;
+                reversedNum = (reversedNum * 10) + rem;
+                num = Math.floor(num / 10);
+            }
+
+            if (reversedNum == temo) {
+                document.write("shti goods")
+            }
+            else{
+                document.write("shti nopp goods")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "G:/MY Works"
+		},
+		{
+			"path": "../../../Downloads/GLS Exam/PSP/prac"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stdio.h": "c",
+			"string.h": "c"
+		}
+	}
+}
