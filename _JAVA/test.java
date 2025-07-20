@@ -14,3 +14,4 @@ public class test {
         char b = 'g';// char can only hold one character in  
     }    
 }
+
