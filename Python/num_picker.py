@@ -15,3 +15,5 @@ while True:
     elif num < x:
         print("Go a little higher")
         num = int(input("Enter a number between 1 to 10\n"))
+
+#Damm
