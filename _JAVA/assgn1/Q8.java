@@ -16,3 +16,4 @@ public class Q8 {
         q.convert(x);
     }
 }
+
