@@ -15,3 +15,4 @@ public class Q7 {
         Q7 a = new Q7(1,3);
     }
 }
+
