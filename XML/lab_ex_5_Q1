@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+	<!DOCTYPE catalog [
+		<!ELEMENT catalog (category,item+,discount?)>
+		<!ELEMENT category (#PCDATA)>
+		<!ELEMENT item (#PCDATA)>
+		<!ELEMENT discount (#PCDATA)>
+		]>
+		
+	<catalog>
+		<category>a</category>
+		<item>11</item>
+		<discount>11.11</discount>
+	</catalog>
