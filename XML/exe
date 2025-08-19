@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+	<!DOCTYPE employee [
+		<!ELEMENT employee (empid,manager)*>
+		<!ELEMENT empid (#PCDATA)>
+		<!ATTLIST empid eid ID #REQUIRED>
+		<!ELEMENT manager (#PCDATA)>
+		<!ATTLIST manager m_id IDREF #REQUIRED>
+		]>
+		<employee>
+			<empid eid = "a1">a</empid>
+			<manager m_id = "a1">wow</manager>
+		</employee>
