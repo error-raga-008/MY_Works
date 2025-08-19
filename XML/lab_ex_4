@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+	<!DOCTYPE bookstore [
+		<!ELEMENT bookstore (book)*>
+		<!ELEMENT book (titile,price,author)>
+		<!ATTLIST book ISBN CDATA #REQUIRED>
+		<!ATTLIST book year CDATA #REQUIRED>
+		<!ELEMENT titile (#PCDATA)>
+		<!ELEMENT price (#PCDATA)>
+		<!ELEMENT author (#PCDATA)>
+		]>
+		<bookstore>
+			<book ISBN="1231234" year ="1321">
+			<titile>ABX</titile>
+			<price>123412</price>
+			<author>123123</author>
+			</book>
+			<book ISBN="123234" year ="1321">
+			<titile>ABX</titile>
+			<price>123412</price>
+			<author>123123</author>
+			</book>
+		</bookstore>
