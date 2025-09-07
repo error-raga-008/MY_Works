@@ -23,14 +23,9 @@ public class test {
         bf.insert(10, "WOW");//inserting a new text at 10th index
         System.out.println(bf);
 
-        bf.setCharAt(0, 'a');
+        bf.setCharAt(0, 'a');//char has to in ''
         System.out.println(bf);
-
-
-        StringBuilder bb = new StringBuilder("ELO");
-
-        
+    
 
     }
 }
-
