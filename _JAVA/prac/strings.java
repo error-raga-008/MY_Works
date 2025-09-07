@@ -5,9 +5,9 @@ public class test {
         String s = "WOW THIS IS WOW ";
 
         String x = s.toLowerCase();//look at the code
-        System.out.println(x);//look at the code
+        System.out.println(x);
 
-        x = s.toUpperCase();
+        x = s.toUpperCase();//look at the code
         System.out.println(x);
 
         x = s.trim();//trimming " " from starting and ending of a string
