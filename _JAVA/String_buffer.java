@@ -22,3 +22,4 @@ public class String_buffer {
         System.out.println(a);
     }
 }
+
