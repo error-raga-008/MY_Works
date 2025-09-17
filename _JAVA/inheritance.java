@@ -39,3 +39,4 @@ public class ZZ extends XX{ //this class and above one both extends to xx class
 public class inheritance { 
     
 }
+
