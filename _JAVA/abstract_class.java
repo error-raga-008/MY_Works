@@ -20,3 +20,4 @@ public class abstract_class {
         d.sound();  //abstract method
     }
 }
+
