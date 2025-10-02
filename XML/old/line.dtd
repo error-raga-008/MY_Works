@@ -1,0 +1,5 @@
+<!ELEMENT mained (lineBreak,notes,message)>
+<!ATTLIST mained aired CDATA "GG"> 
+<!ELEMENT lineBreak EMPTY>
+<!ELEMENT notes ANY>
+<!ELEMENT message (#PCDATA| bold | italic)*>
