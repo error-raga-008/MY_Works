@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+	<!DOCTYPE file SYSTEM "file.dtd">
+	<file>
+		<employee empID = "123" designation = "AMD">
+			<name>abc</name>
+			<salary>132123</salary>
+			<department>ddd</department>
+		</employee>
+		<employee empID = "123" designation="AMD">
+			<name>abc</name>
+			<salary>132123</salary>
+			<department>ddd</department>
+		</employee>
+	</file>
