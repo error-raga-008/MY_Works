@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+	<!DOCTYPE mained SYSTEM "line.dtd">
+	<mained>
+		<lineBreak/>
+		<notes>111</notes>
+		<message>helo</message>
+	</mained>
