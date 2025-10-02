@@ -25,3 +25,4 @@ public class Q_2 {
         e.out();
     }
 }
+
