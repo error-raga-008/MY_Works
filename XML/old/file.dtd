@@ -1,0 +1,7 @@
+<!ELEMENT file (employee)*>
+<!ELEMENT employee (name,salary,department)>
+<!ATTLIST employee empID CDATA #REQUIRED>
+<!ATTLIST employee designation CDATA #FIXED "AMD">
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT department (#PCDATA)>
