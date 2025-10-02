@@ -35,6 +35,7 @@ public class add {
 
         int mod = a%b;
         System.out.println(mod);
+
+        sc.close();
     }
 }
-
