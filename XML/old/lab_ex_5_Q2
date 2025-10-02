@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+	<!DOCTYPE transaction [
+		<!ELEMENT transaction (payment)>
+		<!ELEMENT payment (creditcard | debitcard)>
+		<!ELEMENT creditcard (#PCDATA)>
+		<!ELEMENT debitcard (#PCDATA)>
+		]>
+		<transaction>
+			<payment>
+				<creditcard>12</creditcard>
+			</payment>
+		</transaction>
