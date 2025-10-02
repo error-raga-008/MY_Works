@@ -2,7 +2,7 @@
 
 class InvalidAgeException extends Exception{ //we need to extends the coustom excep to the Exception class
     InvalidAgeException(String s){ //next make a constructor to with a string perimeter
-        super(s);// Pass the string to Exception constructor
+        super(s);// Pass the string to Exception constructor AND THIS CAN BE ONLY CALLED IN A CONSTRUCTOR
     }
 }
 public class Custom_Exception {
@@ -24,4 +24,3 @@ public class Custom_Exception {
         System.out.println("DONE");
     }
 }
-
