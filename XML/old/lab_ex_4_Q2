@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+	<!DOCTYPE DTD [
+		<!ELEMENT DTD (movie)*>
+		<!ELEMENT movie (titile,director,genre,releaseDate?)>
+		? → Element is optional (0 or 1 occurrence).
+		* → Element is optional and repeatable (0 or more times).
+		+ → Element is required and repeatable (1 or more times).
+		<!ELEMENT titile (#PCDATA)>
+		<!ELEMENT director (#PCDATA)>
+		<!ELEMENT genre (#PCDATA)>
+		<!ELEMENT releaseDate (#PCDATA)>
+		<!ENTITY dd "DAM">
+		]>
+		<DTD>
+			<movie>
+				<titile>ABC &dd;</titile>
+				<director>asdsa</director>
+				<genre>aa</genre>
+				<releaseDate>111</releaseDate>
+			</movie>
+			
+			<movie>
+				<titile>ABC &dd;</titile>
+				<director>asdsa</director>
+				<genre>aa</genre>
+				<releaseDate>111</releaseDate>
+			</movie>
+			
+			<movie>
+				<titile>ABC &dd;</titile>
+				<director>asdsa</director>
+				<genre>aa</genre>
+				<releaseDate>111</releaseDate>
+			</movie>
+		</DTD>
