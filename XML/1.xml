@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+	
+	<playlist>
+		<song lang="eng">
+			<name>el0o</name>
+			<artist>a</artist>
+			<duration>11</duration>
+		</song>
+		<song lang="eng">
+			<name>elo</name>
+			<album>b</album>
+			<duration>11</duration>
+		</song>
+	</playlist>
