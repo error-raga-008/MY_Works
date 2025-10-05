@@ -1,14 +1,19 @@
 <?xml version="1.0"?>
 	
-	<playlist>
-		<song lang="eng">
-			<name>el0o</name>
-			<artist>a</artist>
-			<duration>11</duration>
-		</song>
-		<song lang="eng">
-			<name>elo</name>
-			<album>b</album>
-			<duration>11</duration>
-		</song>
-	</playlist>
+	<detail>
+		<emp>
+			<id>1</id>
+			<name>A</name>
+			<sala>10</sala>
+		</emp>
+		<emp>
+			<id>1</id>
+			<name>b</name>
+			<sala>200</sala>
+		</emp>
+		<emp>
+			<id>1</id>
+			<name>A</name>
+			<sala>1000</sala>
+		</emp>
+	</detail>
