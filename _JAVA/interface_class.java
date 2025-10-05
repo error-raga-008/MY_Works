@@ -1,5 +1,3 @@
-import java.util.*;
-
 interface shape{ //interface class is declared by "interface" keyword and not with class
     void area(); //the methond in the interface does not contain any content its just intialized here
 }
@@ -20,4 +18,3 @@ public class interface_class {
     }
     
 }
-
