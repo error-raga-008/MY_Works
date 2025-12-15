@@ -1,5 +1,5 @@
 import mypack.MATHHELP;
-
+//everything in the package has to be public
 public class pack_test {
 
     public static void main(String[] args) {
