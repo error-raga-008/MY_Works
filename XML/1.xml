@@ -1,19 +1,32 @@
 <?xml version="1.0"?>
 	
-	<detail>
-		<emp>
-			<id>1</id>
+	<!DOCTYPE shop [
+		<!ELEMENT shop ANY>
+		<!ELEMENT order (#PCDATA |name | prc |qty | sep)*>
+		<!ATTLIST order id ID #REQUIRED>
+		<!ELEMENT sep EMPTY>
+		<!ELEMENT name (#PCDATA | value)*>
+		<!ELEMENT value (#PCDATA)>
+		<!ELEMENT prc (#PCDATA)>
+		<!ELEMENT qty (#PCDATA)>
+		<!ENTITY helo "hello">
+		]>
+	
+	<shop>
+		<order id ="A1">
 			<name>A</name>
-			<sala>10</sala>
-		</emp>
-		<emp>
-			<id>1</id>
-			<name>b</name>
-			<sala>200</sala>
-		</emp>
-		<emp>
-			<id>1</id>
-			<name>A</name>
-			<sala>1000</sala>
-		</emp>
-	</detail>
+			<prc>100</prc>
+			<qty>&helo;</qty>
+			<sep></sep>
+		</order>
+		<order id ="A3">
+			<name>B</name>
+			<prc>100</prc>
+			<qty>2</qty>
+		</order>
+		<order id ="A2">
+			<name>C</name>
+			<prc>100</prc>
+			<qty>3</qty>
+		</order>
+	</shop>
