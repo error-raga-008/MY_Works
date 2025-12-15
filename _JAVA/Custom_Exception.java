@@ -5,7 +5,7 @@ class InvalidAgeException extends Exception{ //we need to extends the coustom ex
         super(s);// Pass the string to Exception constructor AND THIS CAN BE ONLY CALLED IN A CONSTRUCTOR
     }
 }
-public class Custom_Exception {
+class Custom_Exception {
     static void validate(int age)throws InvalidAgeException{ //making a fuction to check the things
         if (age<18) {
             throw new InvalidAgeException("not valid to vote");
@@ -24,4 +24,3 @@ public class Custom_Exception {
         System.out.println("DONE");
     }
 }
-
