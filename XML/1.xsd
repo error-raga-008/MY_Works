@@ -1,29 +1,40 @@
 <?xml version="1.0"?>
-	
 	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-		<xs:simpleType name="ana">
+		
+		<xs:simpleType name="lang">
 			<xs:restriction base="xs:string">
-				<xs:maxLength value="30"/>
+				<xs:enumeration value="x"/>
+				<xs:enumeration value="y"/>
+				<xs:enumeration value="z"/>
 			</xs:restriction>
 		</xs:simpleType>
+		<xs:simpleType name="al">
+			<xs:restriction base="xs:string">
+				<xs:minLength value="0"/>
+				<xs:maxLength value="12"/>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="prc">
+			<xs:union memberTypes="xs:int xs:double"/>
+		</xs:simpleType>
 		
-		<xs:element name="playlist">
+		<xs:element name="play">
+		<xs:complexType mixed="true">
+		<xs:sequence>
+		
+			<xs:element name="song" maxOccurs="unbounded">
 			<xs:complexType>
 			<xs:sequence>
-				<xs:element name="song" maxOccurs="9">
-				<xs:complexType>
-				<xs:sequence>
-					<xs:element name="name" type="xs:string"/>
-					<xs:choice>
-						<xs:element name="artist" type="xs:string"/>
-						<xs:element name="album" type="ana"/>
-					</xs:choice>
-					<xs:element name="duration" type="xs:int"/>
-				</xs:sequence>
-				<xs:attribute name="lang" type="xs:string"/>
-				</xs:complexType>
-				</xs:element>
+				<xs:element name="tit" type="xs:string"/>
+				<xs:element name="album" type="al"/>
+				<xs:element name="dur" type="xs:time"/>
+				<xs:element name="prc" type="prc"/>
 			</xs:sequence>
+				<xs:attribute name="lang" type="lang"/>
 			</xs:complexType>
+			</xs:element>
+		
+		</xs:sequence>
+		</xs:complexType>
 		</xs:element>
 	</xs:schema>
