@@ -13,6 +13,7 @@ public class File_InputStream_and_OutputStream {
 
             while ((c=ined.read()) != -1) {
                 System.out.println(c);
+                outed.write(c);
             }
 
             //FileInputStream Methods
@@ -37,4 +38,3 @@ public class File_InputStream_and_OutputStream {
         }
     }
 }
-
