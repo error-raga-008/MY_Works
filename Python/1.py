@@ -15,7 +15,6 @@ print("\n",type(a))
 
 x = True #the true and flase need to have capital "T AND F" in python 
 
-# membership ops
-# assignment ops
-# logical ops
+#a++ AND a-- this shit does not works
 
+# logical ops
