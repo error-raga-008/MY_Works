@@ -18,3 +18,4 @@ x = True #the true and flase need to have capital "T AND F" in python
 # membership ops
 # assignment ops
 # logical ops
+
