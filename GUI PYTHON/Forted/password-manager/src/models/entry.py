@@ -18,3 +18,4 @@ class PasswordEntry(db.Model):
 
     def __repr__(self):
         return f'<PasswordEntry {self.username} @ {self.website}>'
+
