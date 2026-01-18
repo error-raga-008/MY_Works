@@ -14,7 +14,7 @@ void push(){
     else
     {   
         int item;
-        cout<<endl<<"Enter the number ";
+        cout<<endl<<"Enter the number";
         cin>>item;
         top++;
         stack[top] = item;
@@ -111,4 +111,3 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
-
