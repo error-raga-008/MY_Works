@@ -17,7 +17,7 @@ public:
     void out(){
         cout<<"Laptop is "<<name<<" with id "<<id<<" and price "<<price<<endl;
     }
-    //test
+    //test 2
 };
 
 int main(int argc, char const *argv[])
@@ -29,4 +29,3 @@ int main(int argc, char const *argv[])
     l3.in();
     return 0;
 }
-
