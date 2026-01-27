@@ -17,7 +17,7 @@ public:
     void out(){
         cout<<"Laptop is "<<name<<" with id "<<id<<" and price "<<price<<endl;
     }
-    
+    //test
 };
 
 int main(int argc, char const *argv[])
