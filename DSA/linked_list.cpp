@@ -41,7 +41,7 @@ node* create_ll(node *start){
     return start;
 }
 
-void display(node *start){
+void display(node *start){ //we pass the start so we know where the linked list begins
     node *ptr = start; //we made a pointer obj of node class that that starts from the first node of the linked list as start represent the head or the first element of the list 
 
     if (start == NULL)
@@ -68,4 +68,3 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
-
