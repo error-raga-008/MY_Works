@@ -65,14 +65,12 @@ void display(node *start){
 
 node *insert_beginning(node *start){
 
-    node *n_node;
-
     int num; 
 
     cout<<"Enter data";
     cin>>num; //getting data to put in the new node
 
-    n_node = new node(); //creating a obj of node class
+    node *n_node = new node(); //creating a obj of node class
 
     n_node->data = num; //setting data for new node 
     n_node->next = start; //setting next for new node the start as it will be the next node after this one become the new start
@@ -83,14 +81,13 @@ node *insert_beginning(node *start){
 
 node *insert_end(node *start)
 {
-    node *n_node;
 
     int num; 
 
     cout<<"Enter data";
     cin>>num; //getting data to put in the new node
 
-    n_node = new node(); //creating a obj of node class
+    node *n_node = new node(); //creating a obj of node class
     
     n_node -> data = num; //setting data for new node 
     n_node -> next = NULL; //setting next for new node NULL Because there is no node after this one
@@ -99,6 +96,63 @@ node *insert_end(node *start)
     rear = n_node;  //assign the new node to the last
 
     return start;
+}
+
+node *insert_after(node *start){
+
+    node *ptr = start;
+    node *preptr = start;
+
+    int num;
+    int postion;
+    int count = 0;
+
+    cout<<"Enter the data you want to enter after the postion of the given node";
+    cin>>num;
+
+    cout<<"Enter the postion after which u want to enter the data";
+    cin>>postion;
+
+    node *new_node = new node();
+    new_node-> data = num;
+
+    while (count != postion)
+    {
+        preptr = ptr;
+        ptr = ptr->next;
+        count++;
+    }
+    
+    new_node -> next = ptr;
+    preptr -> next = new_node;
+
+}
+
+node *delete_beg(node *start){
+
+    node *ptr;
+
+    ptr = start;
+    start = start->next;
+    free(ptr);
+    
+}
+
+node *delete_end(node *start){
+
+    node *ptr = start;
+    node *preptr = start;
+
+    while (ptr->next != NULL)
+    {
+        preptr = ptr;
+        ptr = ptr->next;
+    }
+
+    preptr->next = NULL;
+    rear = preptr;
+    free(ptr);
+    
 }
 
 int main(int argc, char const *argv[])
@@ -111,7 +165,8 @@ int main(int argc, char const *argv[])
         cout<<"2: Display list"<<endl;
         cout<<"3:Add a node in the beginning"<<endl;
         cout<<"4:Add a node at the end"<<endl;
-        cout<<"5:Add a node after a given node"<<endl;cout<<"6:Delete node from the beginning"<<endl;
+        cout<<"5:Add a node after a given node"<<endl;
+        cout<<"6:Delete node from the beginning"<<endl;
         cout<<"7:Delete node from the end"<<endl;
         cout<<"8:Delete a node after a given node"<<endl;
         cout<<"9:Exit"<<endl;
@@ -121,7 +176,7 @@ int main(int argc, char const *argv[])
         switch(option)
         {
 
-            //we set start eberytime we call a function because everyfucntions returns start
+            //we set start everytime we call a function because everyfucntions returns start
             //and this tells us where the linked list start and this is also the reason we
             //send the start function to every functions so it know the where the linked list start
 
@@ -142,21 +197,23 @@ int main(int argc, char const *argv[])
             start = insert_end(start);
             break;
 
-            // case 5:
-            // start=insert_after(start);
-            // break;
+            case 5:
+            start=insert_after(start);
+            break;
 
-            // case 6:
-            // start=delete_beg(start);
-            // break;
+            case 6:
+            start=delete_beg(start);
+            break;
 
-            // case 7:
-            // start=delete_end(start);
-            // break;
+            case 7:
+            start=delete_end(start);
+            break;
             
             // case 8:
             // start=delete_after(start);
             // break;
+
+            //also make for insert after a value or after a certain node
         }
     }while(option !=9);
 
