@@ -11,53 +11,56 @@ node *start = NULL;
 node *rear = NULL;
 
 node *create_node(node *start){
-    
-    int num = 0;
 
-    while (num != -1)
-    {
-        cout<<"Enter num to enter";
-        cin>>num;
+	int num;
+	
+	while (true){
 
-        node *n_node = new node();
-        n_node -> data = num;
+		cout<<"Enter the number and -1 to exit"<<endl;
+		cin>>num;
+		if (num == -1)
+		{
+			break;
+		}
+		else
+		{
+		
+			node *new_node = new node();
+			new_node -> data = num;
 
-        if (start == NULL)
-        {
-            n_node->next = NULL;
-            start = n_node;
-            rear = n_node;
-    
-        }
-        else
-        {
-            rear -> next = n_node;
-            n_node-> next = NULL;
-            rear = n_node;
-        }
-        
-    }
-
+			if (start == NULL)
+			{
+				new_node -> next = NULL;
+				start = new_node;
+				rear = new_node;
+			}
+			else
+			{
+				rear -> next = new_node;
+				new_node -> next = NULL;
+				rear = new_node;
+			}
+		}
+	}
+	return start;
 }
 
-void display(node *start)
-{
-    node *ptr = start;
+void display(node *start){
+	node *ptr = start;
 
-    if (start = NULL)
-    {
-        cout<<"Empty";
-    }
-    else
-    {
-        while (ptr -> next != NULL)
-        {
-            cout<<ptr -> data<<" ";
-            ptr = ptr -> next; 
-        }
-        
-    }
-    
+	if (start == NULL)
+	{
+		cout<<"helo";
+	}
+	else
+	{
+		do {
+
+			cout<<ptr->data<<" ";
+			ptr = ptr->next;
+
+		}while(ptr-> next != NULL);
+	}
 }
 
 node *insert_beginning(node *start){
