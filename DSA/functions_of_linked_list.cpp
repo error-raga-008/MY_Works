@@ -196,12 +196,12 @@ node *delete_after(node *start){
     node *preptr = start;
 
     int postion;
-    int count = 1;
+    int count = 0;
 
     cout<<"Enter the postion after which u want to delete the data";
     cin>>postion;
 
-    while (count < postion && ptr->next != NULL)
+    while (count != postion && ptr->next != NULL)
     {
         preptr = ptr;
         ptr = ptr->next;
@@ -282,5 +282,4 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
-
 
