@@ -54,12 +54,13 @@ void display(node *start){
 	}
 	else
 	{
-		do {
-
-			cout<<ptr->data<<" ";
-			ptr = ptr->next;
-
-		}while(ptr-> next != NULL);
+		while (ptr->next != NULL)
+        {
+            cout << ptr->data << " ";
+            ptr = ptr->next;
+        }
+        cout<<ptr->data;
+        
 	}
 }
 
@@ -76,6 +77,8 @@ node *insert_beginning(node *start){
     n_node->next = start; //setting next for new node the start as it will be the next node after this one become the new start
     
     start = n_node; //setting the new node to start
+
+    return start;
 
 }
 
@@ -98,7 +101,7 @@ node *insert_end(node *start)
     return start;
 }
 
-node *insert_after(node *start){
+node *insert_after_pos(node *start){
 
     node *ptr = start;
     node *preptr = start;
@@ -126,6 +129,34 @@ node *insert_after(node *start){
     new_node -> next = ptr;
     preptr -> next = new_node;
 
+    return start;
+
+}
+
+node *insert_after_val(node *start){
+
+    node *new_node = new node();
+    node *ptr = start;
+    
+    
+    int val;
+    cout<<"Enter the value after u want to enter the value";
+    cin>>val;
+    
+    int num;
+    cout<<"Enter the data u want to add";
+    cin>>num;
+
+    while (ptr->data != val && ptr->next != NULL)
+    {
+        ptr = ptr->next; 
+    }
+    
+    new_node->data = num;
+    new_node->next = ptr->next;
+    ptr->next = new_node;
+
+    return start;
 }
 
 node *delete_beg(node *start){
@@ -135,6 +166,8 @@ node *delete_beg(node *start){
     ptr = start;
     start = start->next;
     free(ptr);
+
+    return start;
     
 }
 
@@ -152,7 +185,33 @@ node *delete_end(node *start){
     preptr->next = NULL;
     rear = preptr;
     free(ptr);
+
+    return start;
     
+}
+
+node *delete_after(node *start){
+
+    node *ptr = start;
+    node *preptr = start;
+
+    int postion;
+    int count = 1;
+
+    cout<<"Enter the postion after which u want to delete the data";
+    cin>>postion;
+
+    while (count < postion && ptr->next != NULL)
+    {
+        preptr = ptr;
+        ptr = ptr->next;
+        count++;
+    }
+
+    preptr->next = ptr->next;
+    free(ptr);
+
+    return start;
 }
 
 int main(int argc, char const *argv[])
@@ -166,10 +225,11 @@ int main(int argc, char const *argv[])
         cout<<"3:Add a node in the beginning"<<endl;
         cout<<"4:Add a node at the end"<<endl;
         cout<<"5:Add a node after a given node"<<endl;
-        cout<<"6:Delete node from the beginning"<<endl;
-        cout<<"7:Delete node from the end"<<endl;
-        cout<<"8:Delete a node after a given node"<<endl;
-        cout<<"9:Exit"<<endl;
+        cout<<"6:Add a node after a given value"<<endl;
+        cout<<"7:Delete node from the beginning"<<endl;
+        cout<<"8:Delete node from the end"<<endl;
+        cout<<"9:Delete a node after a given node"<<endl;
+        cout<<"10:Exit"<<endl;
         cout<<"Enter your choice:"<<endl;
         cin>>option;
 
@@ -198,26 +258,28 @@ int main(int argc, char const *argv[])
             break;
 
             case 5:
-            start=insert_after(start);
+            start=insert_after_pos(start);
             break;
 
             case 6:
-            start=delete_beg(start);
+            start=insert_after_val(start);
             break;
 
             case 7:
+            start=delete_beg(start);
+            break;
+
+            case 8:
             start=delete_end(start);
             break;
             
-            // case 8:
-            // start=delete_after(start);
-            // break;
+            case 9:
+            start=delete_after(start);
+            break;
 
-            //also make for insert after a value or after a certain node
         }
-    }while(option !=9);
+    }while(option != 10);
 
     return 0;
 }
-
 
