@@ -28,3 +28,9 @@ print(x)
 a.update({"a":1}) #used to Insert an item to the dictionary
 
 print(a.get("a")) #get the value of the given key
+
+print(a["a"]) #print only the value of a
+
+print(a.keys())
+
+print(a.values())
