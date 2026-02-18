@@ -32,3 +32,10 @@ a.extend(1) #add the element to the last of the list
 # print(a.min()) #print the max and min element of the list
 
 #print(a.sum()) #print the sum of the list
+
+
+#print a list in reverse order 
+a = [1,2,3,4]
+
+for i in range(-1,-5,-1):
+    print(a[i])
