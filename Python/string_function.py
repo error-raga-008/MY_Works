@@ -1,5 +1,7 @@
 a = " Hello World "
 
+print(a*5) #print the string 5 times
+
 print(a.capitalize()) #Converts the first character to uppercase
 print(a.upper()) #Converts all char to uppercase
 print(a.lower()) #Converts all char to lowercase
@@ -26,3 +28,17 @@ s = '  ##*#GeeksforGeeks#**##  '
 res = s.strip('#* ')
 
 print(res) #GeeksforGeeks -output
+
+x = "SUP WIGA NIIGA"
+
+print(x.find("WIGA")) #Find the position of the give sub string in main string 
+
+x = "         SUP WIGA NIIGA          "
+print(x.lstrip()) #remove the whitespace from left side
+print(x.rstrip()) #remove the whitespace from right side
+
+x = x+" Elo" #concate extra string to the string 
+print(x)
+
+print(x.endswith("n")) #check if the given string start or end with this char and output True or False
+print(x.startswith("d"))
