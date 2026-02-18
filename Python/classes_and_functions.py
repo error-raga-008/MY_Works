@@ -26,3 +26,21 @@ def hello(): #how to define the func without a class
 hello() 
 
 del e #this is how to del a obj
+
+
+#Variable-length arguments (*args) allow a function to accept any number of positional arguments. 
+# The arguments are collected into a tuple inside the function
+def add(*args):
+    total = 0
+    for num in args:
+        total += num
+    print("Sum:", total)
+
+add(10, 20)
+add(5, 10, 15, 20)
+
+
+# Lambda function to calculate cube
+cube = lambda x: x ** 3
+
+print("Cube:", cube(3))
