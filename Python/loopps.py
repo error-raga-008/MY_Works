@@ -6,7 +6,7 @@ while a <= 10:
 
 for a in range(15):
     if a == 12:
-        continue #we know what break does
+        continue #U know what break does
     print(a)
     a += 1
 
@@ -17,4 +17,3 @@ for i in range(1,6):
 
 for i in range(1,11,2):
     print(i)
-
