@@ -15,7 +15,7 @@ print(a.items()) #print all the items only
 print(a.keys()) #print all the keys only
 
 print(a.pop("a")) #pop is used to remove an item with a given key
-print(a.popitem()) #popitem is used to remove them item
+print(a.popitem()) #popitem is used to remove the item
 
 print(a.values()) #this is used to print the number of item in the dic
 
