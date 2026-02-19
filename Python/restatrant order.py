@@ -41,12 +41,8 @@ class order(menu):
             print("------------------------")
         
         print("and the total cost is ",self.sum)
-
-    def __del__(self):
-        print("WE DONE")
     
 o = order()
 
 o.orde()
 o.final()
-del o
